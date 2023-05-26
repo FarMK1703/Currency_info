@@ -1,0 +1,155 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html{
+
+
+  
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  height: auto;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+.wrapper{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+button{
+    background-color: #068DA9;
+    border: 1px solid transparent;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 19px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.50rem;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    background-color: transparent;
+    color: #068DA9;
+    border-color: #068DA9;
+    transition: 0.3s ease-in;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.currencyInfo{
+  padding: 10px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2); 
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  min-width: calc(20% - 40px);
+  color: #068DA9;
+  font-size: 18px;
+}
+
+
+@media(max-width:426px){
+  h1{
+    font-size: 20px;
+    padding: 10px;
+  }   
+
+  button{
+    width: 80%;
+  }
+
+  .currencyInfo{
+    margin: 5px;
+    min-width: calc(50% - 10px);
+    font-size: 18px;
+  }
+}
+
